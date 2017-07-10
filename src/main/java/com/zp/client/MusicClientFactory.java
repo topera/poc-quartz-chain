@@ -3,8 +3,7 @@ package com.zp.client;
 import com.zp.exceptions.ZPNotSupportedException;
 
 /**
- * Factory to create the correct music client
- * Created by rafael on 18/06/17.
+ * Created by topera on 09/07/17.
  */
 public abstract class MusicClientFactory {
 

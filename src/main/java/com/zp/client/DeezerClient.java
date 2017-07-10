@@ -7,8 +7,7 @@ import com.zp.model.zp.Playlist;
 import com.zp.model.zp.Playlists;
 
 /**
- * Client to access Deezer API
- * Created by rafael on 18/06/17.
+ * Created by topera on 09/07/17.
  */
 public class DeezerClient extends MusicClient {
 

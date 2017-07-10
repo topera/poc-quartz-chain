@@ -3,8 +3,7 @@ package com.zp.exceptions;
 import com.zp.util.I18n;
 
 /**
- * Used when request has error
- * Created by rafael on 18/06/17.
+ * Created by topera on 09/07/17.
  */
 public class ZPRequestError extends ZPException {
 

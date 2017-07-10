@@ -4,8 +4,7 @@ import java.text.MessageFormat;
 import java.util.ResourceBundle;
 
 /**
- * All Internationalization operations are handled here
- * Created by rafael on 18/06/17.
+ * Created by topera on 09/07/17.
  */
 public abstract class I18n {
 

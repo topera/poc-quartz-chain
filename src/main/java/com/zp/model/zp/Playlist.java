@@ -1,8 +1,7 @@
 package com.zp.model.zp;
 
 /**
- * Represents a playlist (collection of tracks)
- * Created by rafael on 19/06/17.
+ * Created by topera on 09/07/17.
  */
 public class Playlist {
 

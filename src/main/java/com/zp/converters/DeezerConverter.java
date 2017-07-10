@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by rafael on 19/06/17.
+ * Created by topera on 09/07/17.
  */
 public abstract class DeezerConverter {
 

@@ -3,40 +3,32 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.zp</groupId>
-    <artifactId>zetta-playlist</artifactId>
-    <version>0.1</version>
+    <groupId>com.topera</groupId>
+    <artifactId>hello.maven.rest</artifactId>
+    <version>1.0</version>
     <packaging>war</packaging>
 
     <dependencies>
 
-        <!-- Used to import reference implementation of JAX-RS -->
+        <!-- Rest Server: used to import reference implementation of JAX-RS -->
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-servlet</artifactId>
             <version>1.19.4</version>
         </dependency>
 
-        <!-- Used to have a Rest client (jackson) -->
+        <!-- Rest Client -->
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-client</artifactId>
             <version>1.19.4</version>
         </dependency>
 
-        <!-- Used to serialize/unserialize class from/to JSON -->
+        <!-- Rest Client and Server: used to serialize/unserialize class from/to JSON -->
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-json</artifactId>
             <version>1.19.4</version>
-        </dependency>
-
-        <!-- Used as improvement of junit  -->
-        <dependency>
-            <groupId>org.spockframework</groupId>
-            <artifactId>spock-core</artifactId>
-            <version>1.1-groovy-2.4</version>
-            <scope>test</scope>
         </dependency>
 
     </dependencies>
@@ -45,17 +37,7 @@
         <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
 
-            <!-- used to increase version of 'maven-war-plugin' -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <warSourceDirectory>web</warSourceDirectory>
-                </configuration>
-            </plugin>
-
-            <!-- used to force java version to 1.8 -->
+            <!-- used to allow java 8 compilation -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -66,30 +48,6 @@
                 </configuration>
             </plugin>
 
-            <!-- plugins used to allow the usage of Spock test Framework -->
-            <plugin>
-                <groupId>org.codehaus.gmavenplus</groupId>
-                <artifactId>gmavenplus-plugin</artifactId>
-                <version>1.5</version>
-                <extensions>true</extensions>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <fileset>
-                                    <directory>src/test/groovy</directory>
-                                    <includes>
-                                        <include>**/*Spec.groovy</include>
-                                    </includes>
-                                </fileset>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 

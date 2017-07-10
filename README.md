@@ -1,4 +1,15 @@
-# zetta-playlist
-An application that allows you to manage your stream music playlists
+# Topera's Hello World #001
+## Maven Rest JAX-RS Hello World
+This hello world is a Rest Client and a Rest Server at same time.
 
-Website: http://zetta.terahorse.com
+Rest Server
+* This example creates this service endpoint: http://localhost:8080/api/playlist
+
+Rest Client
+* This example connects to Deezer API to download some playlist info.
+
+Tech Stack
+* Intellij IDEA 2016.1.4
+* Maven 3.5.0
+* Java 8
+
