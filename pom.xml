@@ -10,17 +10,17 @@
 
     <dependencies>
 
-        <!-- Rest Server: used to import reference implementation of JAX-RS -->
-        <dependency>
-            <groupId>com.sun.jersey</groupId>
-            <artifactId>jersey-servlet</artifactId>
-            <version>1.19.4</version>
-        </dependency>
-
         <!-- Rest Client -->
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-client</artifactId>
+            <version>1.19.4</version>
+        </dependency>
+
+        <!-- Rest Server: used to import reference implementation of JAX-RS -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-servlet</artifactId>
             <version>1.19.4</version>
         </dependency>
 
@@ -37,7 +37,17 @@
         <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
 
-            <!-- used to allow java 8 compilation -->
+            <!-- used specify which folder contains web.xml and other war files -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <warSourceDirectory>web</warSourceDirectory>
+                </configuration>
+            </plugin>
+
+            <!-- used to enable Java 8 compilation -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
