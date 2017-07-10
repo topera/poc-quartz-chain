@@ -1,7 +1,7 @@
-package com.zp.api;
+package com.topera.hello.api;
 
-import com.zp.client.DeezerClient;
-import com.zp.model.zp.Playlists;
+import com.topera.hello.client.DeezerClient;
+import com.topera.hello.model.deezer.Playlists;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

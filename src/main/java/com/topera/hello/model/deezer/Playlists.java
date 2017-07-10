@@ -1,4 +1,4 @@
-package com.zp.model.deezer;
+package com.topera.hello.model.deezer;
 
 import java.util.List;
 
@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Created by topera on 09/07/17.
  */
 @XmlRootElement
-public class PlaylistsDeezer {
+public class Playlists {
 
-    private List<PlaylistDeezer> data;
+    private List<Playlist> data;
     private Integer total;
 
-    public List<PlaylistDeezer> getData() {
+    public List<Playlist> getData() {
         return data;
     }
 
-    public void setData(List<PlaylistDeezer> data) {
+    public void setData(List<Playlist> data) {
         this.data = data;
     }
 

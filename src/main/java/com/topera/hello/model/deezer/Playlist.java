@@ -1,4 +1,4 @@
-package com.zp.model.deezer;
+package com.topera.hello.model.deezer;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -6,12 +6,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Created by topera on 09/07/17.
  */
 @XmlRootElement
-public class PlaylistDeezer {
+class Playlist {
 
     private Long id;
     private String title;
-    private String picture;
-    private String picture_medium;
     private String description;
 
     public Long getId() {
@@ -30,14 +28,6 @@ public class PlaylistDeezer {
         this.title = title;
     }
 
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -46,11 +36,4 @@ public class PlaylistDeezer {
         this.description = description;
     }
 
-    public String getPicture_medium() {
-        return picture_medium;
-    }
-
-    public void setPicture_medium(String picture_medium) {
-        this.picture_medium = picture_medium;
-    }
 }
