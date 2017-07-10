@@ -5,6 +5,7 @@ This hello world is a Rest Client and a Rest Server at same time.
 How to test
 * $ mvn package
 * deploy generated war of: /target/hello.maven.rest-1.0.war
+* Access: http://localhost:8080/api/playlist
 
 Rest Server
 * This example creates this service endpoint: http://localhost:8080/api/playlist
