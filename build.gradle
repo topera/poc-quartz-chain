@@ -1,0 +1,19 @@
+// please use gradle 3.5.1
+apply plugin: 'java'
+apply plugin: 'war'
+
+version = "1.0"
+description = "Gradle Rest Hello World"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // used to have a Rest client (jackson)
+    compile 'com.sun.jersey:jersey-client:1.19.4'
+
+    // used to serialize/unserialize class from/to JSON
+    compile 'com.sun.jersey:jersey-json:1.19.4'
+}
+

@@ -3,8 +3,8 @@
 This hello world is a Rest Client and a Rest Server at same time.
 
 How to test
-* $ gradle TODO....
-* get generated war from TODO and deploy it.
+* $ gradle war
+* get generated war from build/libs/gradle-rest-jaxrs-hello-world-1.0.war and deploy it.
 * Access: http://localhost:8080/api/playlist
 
 Rest Server
