@@ -1,4 +1,4 @@
-package com.topera.hello.api;
+package com.topera.hello;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -11,7 +11,7 @@ public class TestResource {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String test() {
-		return "hello world";
+		return "hello";
 	}
 
 }
