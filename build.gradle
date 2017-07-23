@@ -10,13 +10,19 @@ repositories {
 }
 
 dependencies {
-    // Rest Client
-    compile 'com.sun.jersey:jersey-client:1.19.4'
+    compile 'com.sun.jersey:jersey-server:1.19.3'
+    compile 'com.sun.jersey:jersey-core:1.19.3'
+    compile 'com.sun.jersey:jersey-client:1.19.3'
+    compile 'com.sun.jersey:jersey-servlet:1.19.3'
+    compile 'com.sun.jersey:jersey-json:1.19.3'
 
-    // Rest Server: used to import reference implementation of JAX-RS
-    compile 'com.sun.jersey:jersey-servlet:1.19.4'
+//    // Rest Client
+//    compile 'com.sun.jersey:jersey-client:1.19.4'
+//
+//    // Rest Server: used to import reference implementation of JAX-RS
+//    compile 'com.sun.jersey:jersey-servlet:1.19.4'
+//
+//    // Rest Client and Server: used to serialize/unserialize class from/to JSON
+//    compile 'com.sun.jersey:jersey-json:1.19.4'
 
-    // Rest Client and Server: used to serialize/unserialize class from/to JSON
-    compile 'com.sun.jersey:jersey-json:1.19.4'
 }
-

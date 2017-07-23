@@ -1,17 +1,11 @@
-# Topera's Hello World #002
-## Gradle Rest JAX-RS Hello World
-This hello world is a Rest Client and a Rest Server at same time.
+# Topera's Hello World #003
+## Rest Server with Gradle (using JAX-RS)
+This hello world is a Rest Server created with Gradle and Jersey
 
 How to test
 * $ gradle war
 * get generated war from build/libs/gradle-rest-jaxrs-hello-world-1.0.war and deploy it.
-* Access: http://localhost:8080/api/playlist
-
-Rest Server
-* This example creates this service endpoint: http://localhost:8080/api/playlist
-
-Rest Client
-* This example connects to Deezer API to download some playlist info.
+* Access: http://localhost:8080/api/test
 
 Tech Stack
 * Intellij IDEA 2016.1.4
