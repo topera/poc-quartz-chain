@@ -1,10 +1,10 @@
-# Topera's Hello World #001
-## Maven Rest JAX-RS Hello World
+# Topera's Hello World #002
+## Gradle Rest JAX-RS Hello World
 This hello world is a Rest Client and a Rest Server at same time.
 
 How to test
-* $ mvn package
-* get generated war from target/hello.maven.rest-1.0.war and deploy it.
+* $ gradle TODO....
+* get generated war from TODO and deploy it.
 * Access: http://localhost:8080/api/playlist
 
 Rest Server
@@ -15,6 +15,6 @@ Rest Client
 
 Tech Stack
 * Intellij IDEA 2016.1.4
-* Maven 3.5.0
+* Gradle 3.5.1
 * Java 8
 
