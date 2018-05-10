@@ -14,4 +14,4 @@ Tech Stack
 * Gradle 3.5.1
 * Java 8
 
-To take a look in other tutorials, please see https://github.com/topera/hello-world-index
+To take a look in other projects, please see https://github.com/topera/index
