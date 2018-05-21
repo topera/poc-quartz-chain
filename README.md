@@ -3,6 +3,7 @@
 This hello world is a Rest Server created with Gradle and Jersey
 
 ## How to download this source code
+* Install [Gradle](https://gradle.org/install)
 * Use the `Clone or download` button above the get the url of this repository
 * In IntelliJ IDEA: File → New → Project From Version Control -> Git -> put the url of this repository
 
