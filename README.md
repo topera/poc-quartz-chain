@@ -20,26 +20,33 @@ Then will do these steps on each user:
 If you see a number "far" from 12, you have a problem in your JVM or processor :)
 
 ## Current results
-On my Dell Vostro machine (quad-core):
+On my Dell Vostro machine (quad-core, with embedded GraphicsCard):
 
 Output:
 
-    Running ParallelCPUTest
-    *** Time taken: 1187ms *** 12.0324% of users are kids
-    *** Time taken: 1335ms *** 12.056899999999999% of users are kids
-    *** Time taken: 1459ms *** 12.0448% of users are kids
-    *** Time taken: 1209ms *** 11.9672% of users are kids
-
     Running SequentialTest
-    *** Time taken: 3990ms *** 12.078999999999999% of users are kids
-    *** Time taken: 3659ms *** 11.9939% of users are kids
-    *** Time taken: 3574ms *** 11.9159% of users are kids
-    *** Time taken: 3578ms *** 12.030100000000001% of users are kids
+    *** Time taken: 4120ms *** 11.9742% of users are kids
+    *** Time taken: 4088ms *** 12.0716% of users are kids
+    *** Time taken: 4035ms *** 11.9463% of users are kids
+    *** Time taken: 4036ms *** 11.9709% of users are kids
+
+    Running ParallelCPUTest
+    *** Time taken: 1178ms *** 12.0086% of users are kids
+    *** Time taken: 1322ms *** 11.9767% of users are kids
+    *** Time taken: 1241ms *** 11.9913% of users are kids
+    *** Time taken: 1141ms *** 11.9903% of users are kids
+
+    Running ParallelGraphCardTest
+    *** Time taken: 1260ms *** 11.9888% of users are kids
+    *** Time taken: 1162ms *** 11.9867% of users are kids
+    *** Time taken: 1147ms *** 12.0291% of users are kids
+    *** Time taken: 1148ms *** 12.019% of users are kids
 
 Notes
-* The parallel execution is faster than sequential (~3.5x times)
-    * However, there is a cost to split "tasks" to processors. So, we should try to centralize to have just one parallelStream call.
-* If we remove the slow operation ("calculateMagicNumbers") the sequential is always faster:
+* Comparing sequential with parallel (CPU)
+    * The parallel execution is faster than sequential (~3.5x times)
+        * However, there is a cost to split "tasks" to processors. So, we should try to centralize to have just one parallelStream call.
+    * If we remove the slow operation ("calculateMagicNumbers") the sequential is always faster than parallel
 
 Output:
 
@@ -54,6 +61,9 @@ Output:
     *** Time taken: 20ms *** 11.9948% of users are kids
     *** Time taken: 16ms *** 11.9628% of users are kids
     *** Time taken: 16ms *** 11.9509% of users are kids
+    
+* Comparing CPU with GPU
+    * The times of parallels execution (CPU and GPU) are the same. Probably because I don't have a dedicated graphic board here :(
 
 * Machines:
     * Vostro: Quad-core - Intel® Core™ i5-2410M Processor Launched  Q1 2011 2 2.90 GHz  2.30 GHz  3 MB SmartCache Intel® HD Graphics 3000
@@ -89,6 +99,4 @@ as we can see in the output times:
 * Java 8
 
 To take a look in other projects, please see https://github.com/topera/index
-
-
 
