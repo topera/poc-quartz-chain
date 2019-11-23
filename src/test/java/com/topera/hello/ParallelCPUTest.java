@@ -3,12 +3,11 @@ package com.topera.hello;
 import java.util.List;
 
 @SuppressWarnings("SimplifyStreamApiCallChains")
-public class ParallelTest extends BaseTest {
+public class ParallelCPUTest extends BaseTest {
 
     @Override
     protected void printTestInfo() {
-        System.out.println("");
-        System.out.println("Running ParallelTest");
+        System.out.println("\nRunning ParallelCPUTest");
     }
 
     @Override

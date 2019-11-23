@@ -7,7 +7,7 @@ public class SequentialTest extends BaseTest {
 
     @Override
     protected void printTestInfo() {
-        System.out.println("Running SequentialTest");
+        System.out.println("\nRunning SequentialTest");
     }
 
     @Override
