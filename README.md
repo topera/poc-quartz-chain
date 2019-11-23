@@ -1,6 +1,7 @@
 # Topera's Hello World #022
 ## Parallel tests with Java 8
-This hello world shows how to run parallel code on Java 8
+This hello world shows how to run parallel code on Java 8.
+And **YES** it will use your amazing Graphics Card game to run the tests :)
 
 ## How to use this source code
 * Use the `Clone or download` button above the get the url of this repository
