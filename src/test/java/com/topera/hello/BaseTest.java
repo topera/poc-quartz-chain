@@ -8,7 +8,7 @@ import java.util.List;
 abstract public class BaseTest {
 
     // customizations
-    private static final long MEGA_USERS = 30;
+    private static final long MEGA_USERS = 1;
     private static final int TESTS_EXECUTION = 4;
 
     static final int KID_AGE_LIMIT = 12;
@@ -20,6 +20,7 @@ abstract public class BaseTest {
     static final int MAX_AGE = 100;
 
     protected abstract void printTestInfo();
+    protected abstract void calculateMagicNumbers(List<User> users);
     protected abstract void addAges(List<User> users);
     protected abstract void prepareUsers(List<User> users);
     protected abstract long countKids(List<User> users);
@@ -37,6 +38,7 @@ abstract public class BaseTest {
 
         long begin = System.currentTimeMillis();
 
+        calculateMagicNumbers(users);
         addAges(users);
         prepareUsers(users);
         long kidsQuantity = countKids(users);
@@ -69,6 +71,20 @@ abstract public class BaseTest {
         assert percentage < KID_AGE_LIMIT + KID_AGE_MARGIN;
     }
 
+    double calculateMagicNumber() {
+        // any stupid slow operation...
+        int max=100;
+        double magicNumber = 0;
 
+        for(int i=0; i<max; i++){
+            for(int j=0; j<max; j++){
+                for(int k=0; k<max; k++){
+                    magicNumber += 1;
+                }
+            }
+        }
+
+        return magicNumber;
+    }
 
 }

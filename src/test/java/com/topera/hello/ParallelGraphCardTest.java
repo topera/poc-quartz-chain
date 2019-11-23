@@ -7,7 +7,7 @@ import org.junit.Ignore;
 
 import java.util.List;
 
-@Ignore // not working yet. Needs to install a lib locally
+@Ignore
 public class ParallelGraphCardTest extends ParallelCPUTest {
 
     @Override

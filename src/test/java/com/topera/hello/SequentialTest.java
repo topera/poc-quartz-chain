@@ -11,6 +11,11 @@ public class SequentialTest extends BaseTest {
     }
 
     @Override
+    protected void calculateMagicNumbers(List<User> users) {
+        users.forEach(userIgnoredHere -> calculateMagicNumber());
+    }
+
+    @Override
     protected void addAges(List<User> users) {
         Random random = new Random();
         users.forEach(user -> user.setAge(random.nextInt(MAX_AGE)));

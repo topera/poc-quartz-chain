@@ -11,6 +11,11 @@ public class ParallelCPUTest extends BaseTest {
     }
 
     @Override
+    protected void calculateMagicNumbers(List<User> users) {
+        users.parallelStream().forEach(userIgnoredHere -> calculateMagicNumber());
+    }
+
+    @Override
     protected void addAges(List<User> users) {
         Random random = new Random();
         users.parallelStream().forEach(user -> user.setAge(random.nextInt(MAX_AGE)));
