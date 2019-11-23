@@ -9,7 +9,7 @@ abstract public class BaseTest {
 
     // customizations
     private static final long MEGA_USERS = 30;
-    private static final int TESTS_EXECUTION = 3;
+    private static final int TESTS_EXECUTION = 4;
 
     static final int KID_AGE_LIMIT = 12;
     private static final float KID_AGE_MARGIN = 0.1f;
