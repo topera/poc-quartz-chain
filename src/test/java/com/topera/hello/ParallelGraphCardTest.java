@@ -3,14 +3,16 @@ package com.topera.hello;
 import com.aparapi.Kernel;
 import com.aparapi.Range;
 
+import org.junit.Ignore;
+
 import java.util.List;
 
-@SuppressWarnings("SimplifyStreamApiCallChains")
-public class ParallelGPUTest extends ParallelCPUTest {
+@Ignore // not working yet. Needs to install a lib locally
+public class ParallelGraphCardTest extends ParallelCPUTest {
 
     @Override
     protected void printTestInfo() {
-        System.out.println("\nRunning ParallelGPUTest");
+        System.out.println("\nRunning ParallelGraphCardTest");
     }
 
     @Override

@@ -1,13 +1,19 @@
 package com.topera.hello;
 
 import java.util.List;
+import java.util.Random;
 
-@SuppressWarnings("SimplifyStreamApiCallChains")
 public class ParallelCPUTest extends BaseTest {
 
     @Override
     protected void printTestInfo() {
         System.out.println("\nRunning ParallelCPUTest");
+    }
+
+    @Override
+    protected void addAges(List<User> users) {
+        Random random = new Random();
+        users.parallelStream().forEach(user -> user.setAge(random.nextInt(MAX_AGE)));
     }
 
     @Override

@@ -1,8 +1,8 @@
 package com.topera.hello;
 
 import java.util.List;
+import java.util.Random;
 
-@SuppressWarnings("SimplifyStreamApiCallChains")
 public class SequentialTest extends BaseTest {
 
     @Override
@@ -11,8 +11,14 @@ public class SequentialTest extends BaseTest {
     }
 
     @Override
+    protected void addAges(List<User> users) {
+        Random random = new Random();
+        users.forEach(user -> user.setAge(random.nextInt(MAX_AGE)));
+    }
+
+    @Override
     protected void prepareUsers(List<User> users) {
-        users.stream().forEach(user -> user.prepare(KID_AGE_LIMIT));
+        users.forEach(user -> user.prepare(KID_AGE_LIMIT));
     }
 
     @Override

@@ -8,6 +8,8 @@ This hello world shows how to run parallel code on Java 8
 
 ## How to test
 * $ ./gradlew --info
+* Note: adjust the memory settings changing "maxHeapSize" on build.gradle file 
+
 
 ## Current results
 On my machine the parallel execution is *worst*:

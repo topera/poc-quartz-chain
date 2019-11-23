@@ -4,22 +4,23 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 abstract public class BaseTest {
 
     // customizations
-    private static final long MEGA_USERS = 10;
+    private static final long MEGA_USERS = 30;
+    private static final int TESTS_EXECUTION = 3;
+
     static final int KID_AGE_LIMIT = 12;
     private static final float KID_AGE_MARGIN = 0.1f;
-    private static final int TESTS_EXECUTION = 4;
 
     // inner stuff
     private static final long MEGA = 1000000;
     private static final long USERS = MEGA_USERS * MEGA;
-    private static final int MAX_AGE = 100;
+    static final int MAX_AGE = 100;
 
     protected abstract void printTestInfo();
+    protected abstract void addAges(List<User> users);
     protected abstract void prepareUsers(List<User> users);
     protected abstract long countKids(List<User> users);
 
@@ -36,6 +37,7 @@ abstract public class BaseTest {
 
         long begin = System.currentTimeMillis();
 
+        addAges(users);
         prepareUsers(users);
         long kidsQuantity = countKids(users);
 
@@ -46,6 +48,15 @@ abstract public class BaseTest {
 
         printTimeReport(begin, end, percentage);
     }
+
+    private List<User> createUsers() {
+        List<User> users = new ArrayList<>();
+        for(int i=0; i < USERS; i++) {
+            users.add(new User());
+        }
+        return users;
+    }
+
     private void printTimeReport(long begin, long end, double percentage) {
         System.out.println("*** Time taken: " + (end - begin) + "ms *** " + percentage + "% of users are kids");
     }
@@ -58,16 +69,6 @@ abstract public class BaseTest {
         assert percentage < KID_AGE_LIMIT + KID_AGE_MARGIN;
     }
 
-    private List<User> createUsers() {
-        Random random = new Random();
 
-        List<User> users = new ArrayList<>();
-
-        for(int i=0; i < USERS; i++) {
-            users.add(new User(random.nextInt(MAX_AGE)));
-        }
-
-        return users;
-    }
 
 }
