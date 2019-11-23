@@ -16,8 +16,8 @@ Our program will create millions instances of class User.
 Then will do these steps on each user:
 * Add a random age for he/she
 * Mark the user as a kid, if the age is <= 12 years
-* Finally, will count how many users are kids. If your processor is correct, you should have ~12% of kids, since the highest age is 100 years.
-If you see a number "far" from 12, you have a problem in your JVM or processor :)
+* Finally, will count how many users are kids.
+    * If your processor is correct, you should have ~12% of kids, since the highest age is 100 years. If you see a number "far" from 12, you have a problem in your JVM or processor :)
 
 ## Current results
 On my Dell Vostro machine (quad-core, with embedded GraphicsCard):
