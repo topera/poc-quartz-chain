@@ -64,12 +64,17 @@ Output:
     * You have a costly operation to do on each element
 
 ## Problems with Graphics Card (GPU)
-If you see the error below, please install *TODO*.
-It's displayed in the GPU test, where we try to run parallel tests in your Graphics Card.
+To run the GPU test you need to have **OpenCL** installed in your machine.
+In my Ubuntu I just needed to run:
+
+    sudo apt update
+    sudo apt install ocl-icd-opencl-dev
+
+If you don't install it, probably you will see this error:
 
     GRAVE: Check your environment. Failed to load codegen native library  or possibly failed to locate opencl native library (opencl.dll/opencl.so). Ensure that OpenCL is in your PATH (windows) or in LD_LIBRARY_PATH (linux).
 
-When this happens, the [Aparapi](http://aparapi.com/) library automatically fallsback to *parallelStream()* implementation,
+In case of error the [Aparapi](http://aparapi.com/) library automatically fallsback to *parallelStream()* implementation,
 as we can see in the output times:
 
     Running ParallelGraphCardTest
