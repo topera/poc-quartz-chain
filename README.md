@@ -37,8 +37,10 @@ Output:
 
 Notes
 * The parallel execution is faster than sequential (2.9x times)
-    * The first execution is the most important because the other are biased because of branch-prediction and other optimizations.
+    * The first execution is the most important because the others are biased because of branch-prediction and other optimizations.
 * If we remove the slow operation ("calculateMagicNumbers") the sequential is always faster:
+
+Output:
 
     Running SequentialTest
     *** Time taken: 58ms *** 12.0478% of users are kids
