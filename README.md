@@ -62,6 +62,21 @@ Output:
     * You have a very big list of elements/array (like 1 million instances)
     * You have a costly operation to do on each element
 
+## Problems with Graphics Card (GPU)
+If you see the error below, please install *TODO*.
+It's displayed in the GPU test, where we try to run parallel tests in your Graphics Card.
+
+    GRAVE: Check your environment. Failed to load codegen native library  or possibly failed to locate opencl native library (opencl.dll/opencl.so). Ensure that OpenCL is in your PATH (windows) or in LD_LIBRARY_PATH (linux).
+
+When this happens, the [Aparapi](http://aparapi.com/) library automatically fallsback to *parallelStream()* implementation,
+as we can see in the output times:
+
+    Running ParallelGraphCardTest
+    *** Time taken: 1240ms *** 12.0365% of users are kids
+    *** Time taken: 1137ms *** 12.0254% of users are kids
+    *** Time taken: 1140ms *** 12.058399999999999% of users are kids
+    *** Time taken: 1141ms *** 12.0432% of users are kids
+
 ## Tech Stack
 * Intellij IDEA 2019.2
 * Gradle 4.10.3

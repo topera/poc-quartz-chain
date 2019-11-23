@@ -3,11 +3,8 @@ package com.topera.hello;
 import com.aparapi.Kernel;
 import com.aparapi.Range;
 
-import org.junit.Ignore;
-
 import java.util.List;
 
-@Ignore
 public class ParallelGraphCardTest extends BaseTest {
 
     @Override
