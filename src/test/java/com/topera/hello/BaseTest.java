@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 abstract public class BaseTest {
 
@@ -17,12 +18,11 @@ abstract public class BaseTest {
     // inner stuff
     private static final long MEGA = 1000000;
     private static final long USERS = MEGA_USERS * MEGA;
-    static final int MAX_AGE = 100;
+    private static final int MAX_AGE = 100;
+    private static final Random random = new Random();
 
     protected abstract void printTestInfo();
-    protected abstract void calculateMagicNumbers(List<User> users);
-    protected abstract void addAges(List<User> users);
-    protected abstract void prepareUsers(List<User> users);
+    protected abstract void processUsers(List<User> users);
     protected abstract long countKids(List<User> users);
 
     @Test
@@ -38,9 +38,7 @@ abstract public class BaseTest {
 
         long begin = System.currentTimeMillis();
 
-        calculateMagicNumbers(users);
-        addAges(users);
-        prepareUsers(users);
+        processUsers(users);
         long kidsQuantity = countKids(users);
 
         long end = System.currentTimeMillis();
@@ -59,6 +57,13 @@ abstract public class BaseTest {
         return users;
     }
 
+    void processUser(User user) {
+        if (calculateMagicNumber() > 0) {
+            user.setAge(random.nextInt(MAX_AGE));
+            user.setKid(user.getAge() < KID_AGE_LIMIT);
+        }
+    }
+
     private void printTimeReport(long begin, long end, double percentage) {
         System.out.println("*** Time taken: " + (end - begin) + "ms *** " + percentage + "% of users are kids");
     }
@@ -71,7 +76,7 @@ abstract public class BaseTest {
         assert percentage < KID_AGE_LIMIT + KID_AGE_MARGIN;
     }
 
-    double calculateMagicNumber() {
+    private double calculateMagicNumber() {
         // any stupid slow operation...
         int max=100;
         double magicNumber = 0;

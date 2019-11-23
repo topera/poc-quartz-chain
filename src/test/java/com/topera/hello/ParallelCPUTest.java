@@ -1,7 +1,6 @@
 package com.topera.hello;
 
 import java.util.List;
-import java.util.Random;
 
 public class ParallelCPUTest extends BaseTest {
 
@@ -11,19 +10,8 @@ public class ParallelCPUTest extends BaseTest {
     }
 
     @Override
-    protected void calculateMagicNumbers(List<User> users) {
-        users.parallelStream().forEach(userIgnoredHere -> calculateMagicNumber());
-    }
-
-    @Override
-    protected void addAges(List<User> users) {
-        Random random = new Random();
-        users.parallelStream().forEach(user -> user.setAge(random.nextInt(MAX_AGE)));
-    }
-
-    @Override
-    protected void prepareUsers(List<User> users) {
-        users.parallelStream().forEach(user -> user.prepare(KID_AGE_LIMIT));
+    protected void processUsers(List<User> users) {
+        users.parallelStream().forEach(this::processUser);
     }
 
     @Override

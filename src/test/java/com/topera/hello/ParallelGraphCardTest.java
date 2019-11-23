@@ -16,12 +16,12 @@ public class ParallelGraphCardTest extends ParallelCPUTest {
     }
 
     @Override
-    protected void prepareUsers(List<User> users) {
+    protected void processUsers(List<User> users) {
         Kernel kernel = new Kernel() {
             @Override
             public void run() {
                 int i = getGlobalId();
-                users.get(i).prepare(KID_AGE_LIMIT);
+                processUser(users.get(i));
             }
         };
 

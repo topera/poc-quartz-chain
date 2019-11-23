@@ -19,40 +19,40 @@ Then will do these steps on each user:
 If you see a number "far" from 12, you have a problem in your JVM or processor :)
 
 ## Current results
-On my Dell Vostro machine:
+On my Dell Vostro machine (quad-core):
 
 Output:
 
     Running SequentialTest
-    *** Time taken: 5729ms *** 11.9754% of users are kids
-    *** Time taken: 32ms *** 12.003900000000002% of users are kids
-    *** Time taken: 39ms *** 12.0046% of users are kids
-    *** Time taken: 39ms *** 11.984599999999999% of users are kids
+    *** Time taken: 3598ms *** 11.9953% of users are kids
+    *** Time taken: 4005ms *** 12.0319% of users are kids
+    *** Time taken: 3693ms *** 12.0381% of users are kids
+    *** Time taken: 3573ms *** 11.997% of users are kids
 
     Running ParallelCPUTest
-    *** Time taken: 1959ms *** 12.041699999999999% of users are kids
-    *** Time taken: 107ms *** 12.0164% of users are kids
-    *** Time taken: 102ms *** 12.030100000000001% of users are kids
-    *** Time taken: 106ms *** 11.9785% of users are kids
+    *** Time taken: 1251ms *** 11.988% of users are kids
+    *** Time taken: 1331ms *** 12.0435% of users are kids
+    *** Time taken: 1183ms *** 11.9491% of users are kids
+    *** Time taken: 1173ms *** 12.0546% of users are kids
 
 Notes
 * The parallel execution is faster than sequential (2.9x times)
-    * The first execution is the most important because the others are biased because of branch-prediction and other optimizations.
+    * However, there is a cost to split "tasks" to processors. So, we should try to centralize to have just one parallelStream call.
 * If we remove the slow operation ("calculateMagicNumbers") the sequential is always faster:
 
 Output:
 
     Running SequentialTest
-    *** Time taken: 58ms *** 12.0478% of users are kids
-    *** Time taken: 33ms *** 11.9683% of users are kids
-    *** Time taken: 40ms *** 12.0281% of users are kids
-    *** Time taken: 39ms *** 12.0083% of users are kids
+    *** Time taken: 42ms *** 12.0167% of users are kids
+    *** Time taken: 28ms *** 11.9293% of users are kids
+    *** Time taken: 22ms *** 11.95% of users are kids
+    *** Time taken: 23ms *** 11.9614% of users are kids
 
     Running ParallelCPUTest
-    *** Time taken: 171ms *** 11.9694% of users are kids
-    *** Time taken: 110ms *** 11.938500000000001% of users are kids
-    *** Time taken: 114ms *** 11.948% of users are kids
-    *** Time taken: 108ms *** 11.9666% of users are kids
+    *** Time taken: 112ms *** 12.000399999999999% of users are kids
+    *** Time taken: 102ms *** 11.997399999999999% of users are kids
+    *** Time taken: 94ms *** 12.0086% of users are kids
+    *** Time taken: 93ms *** 12.0403% of users are kids
 
 * Machines:
     * Vostro: Quad-core - Intel® Core™ i5-2410M Processor Launched  Q1 2011 2 2.90 GHz  2.30 GHz  3 MB SmartCache Intel® HD Graphics 3000
