@@ -14,7 +14,9 @@ On my machine the parallel execution is *worst*:
 * Sequential: 80ms
 * Parallel: 104ms (*30%* worst)
 
-Machine: Intel® Core™ i5-2410M Processor Launched  Q1 2011 2 2.90 GHz  2.30 GHz  3 MB SmartCache Intel® HD Graphics 3000
+Machine:
+* Intel® Core™ i5-2410M Processor Launched  Q1 2011 2 2.90 GHz  2.30 GHz  3 MB SmartCache Intel® HD Graphics 3000
+
 Output:
 
     Running SequentialTest
