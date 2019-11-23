@@ -10,6 +10,13 @@ This hello world shows how to run parallel code on Java 8
 * $ ./gradlew --info
 * Note: adjust the memory settings changing "maxHeapSize" on build.gradle file 
 
+## Our program
+Our program will create millions instances of class User.
+Then will do these steps on each user:
+* Add a random age for he/she
+* Mark the user as a kid, if the age is <= 12 years
+* Finally, will count how many users are kids. If your processor is correct, you should have ~12% of kids, since the highest age is 100 years.
+If you see a number "far" from 12, you have a problem in your JVM or processor :)
 
 ## Current results
 On my machine the parallel execution is **3.7x** *slower*! - running for 30 million users.
