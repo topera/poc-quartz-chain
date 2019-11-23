@@ -1,21 +1,17 @@
-// please use gradle 3.5.1
+// tested with gradle 4.10.3
 apply plugin: 'java'
-apply plugin: 'war'
 
-version = "1.0"
-description = "Gradle Rest Hello World"
-
-repositories {
-	mavenCentral()
-}
-
-dependencies {
-    // Rest Server: used to import reference implementation of JAX-RS
-    compile 'com.sun.jersey:jersey-servlet:1.19.4'
-
-    // Rest Client
-    // compile 'com.sun.jersey:jersey-client:1.19.4' // if need a rest client, uncomment this
-
-    // Rest Client and Server: used to serialize/unserialize class from/to JSON
-    // compile 'com.sun.jersey:jersey-json:1.19.4' // if need to handle JSON, uncomment this
-}
+//repositories {
+//	mavenCentral()
+//}
+//
+//dependencies {
+//    // Rest Server: used to import reference implementation of JAX-RS
+//    compile 'com.sun.jersey:jersey-servlet:1.19.4'
+//
+//    // Rest Client
+//    // compile 'com.sun.jersey:jersey-client:1.19.4' // if need a rest client, uncomment this
+//
+//    // Rest Client and Server: used to serialize/unserialize class from/to JSON
+//    // compile 'com.sun.jersey:jersey-json:1.19.4' // if need to handle JSON, uncomment this
+//}
