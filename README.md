@@ -59,8 +59,8 @@ Output:
 
 ## Conclusions
 * Parallel streams are useful only if:
-** You have a very big list of elements/array (like 1 million instances)
-** You have a costly operation to do on each element
+    * You have a very big list of elements/array (like 1 million instances)
+    * You have a costly operation to do on each element
 
 ## Tech Stack
 * Intellij IDEA 2019.2
