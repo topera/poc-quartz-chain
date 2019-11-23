@@ -3,12 +3,11 @@
 This hello world shows how to run parallel code on Java 8
 
 ## How to use this source code
-* Install [Gradle](https://gradle.org/install)
 * Use the `Clone or download` button above the get the url of this repository
 * In IntelliJ IDEA: File → New → Project From Version Control → Git → put the url of this repository
 
 ## How to test
-* $ gradle
+* $ ./gradlew
 
 ## Tech Stack
 * Intellij IDEA 2019.2

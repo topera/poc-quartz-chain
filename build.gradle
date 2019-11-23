@@ -1,17 +1,12 @@
-// tested with gradle 4.10.3
+// tested with gradle 5.2.1
 apply plugin: 'java'
 
-//repositories {
-//	mavenCentral()
-//}
-//
-//dependencies {
-//    // Rest Server: used to import reference implementation of JAX-RS
-//    compile 'com.sun.jersey:jersey-servlet:1.19.4'
-//
-//    // Rest Client
-//    // compile 'com.sun.jersey:jersey-client:1.19.4' // if need a rest client, uncomment this
-//
-//    // Rest Client and Server: used to serialize/unserialize class from/to JSON
-//    // compile 'com.sun.jersey:jersey-json:1.19.4' // if need to handle JSON, uncomment this
-//}
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'junit:junit:4.12'
+}
+
+defaultTasks 'test'
