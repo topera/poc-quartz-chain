@@ -8,7 +8,7 @@ import org.junit.Ignore;
 import java.util.List;
 
 @Ignore
-public class ParallelGraphCardTest extends ParallelCPUTest {
+public class ParallelGraphCardTest extends BaseTest {
 
     @Override
     protected void printTestInfo() {

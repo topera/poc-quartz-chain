@@ -14,9 +14,4 @@ public class SequentialTest extends BaseTest {
         users.forEach(this::processUser);
     }
 
-    @Override
-    protected long countKids(List<User> users) {
-        return users.stream().filter(User::isKid).count();
-    }
-
 }

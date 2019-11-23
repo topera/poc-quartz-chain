@@ -23,17 +23,17 @@ On my Dell Vostro machine (quad-core):
 
 Output:
 
-    Running SequentialTest
-    *** Time taken: 3598ms *** 11.9953% of users are kids
-    *** Time taken: 4005ms *** 12.0319% of users are kids
-    *** Time taken: 3693ms *** 12.0381% of users are kids
-    *** Time taken: 3573ms *** 11.997% of users are kids
-
     Running ParallelCPUTest
-    *** Time taken: 1251ms *** 11.988% of users are kids
-    *** Time taken: 1331ms *** 12.0435% of users are kids
-    *** Time taken: 1183ms *** 11.9491% of users are kids
-    *** Time taken: 1173ms *** 12.0546% of users are kids
+    *** Time taken: 1187ms *** 12.0324% of users are kids
+    *** Time taken: 1335ms *** 12.056899999999999% of users are kids
+    *** Time taken: 1459ms *** 12.0448% of users are kids
+    *** Time taken: 1209ms *** 11.9672% of users are kids
+
+    Running SequentialTest
+    *** Time taken: 3990ms *** 12.078999999999999% of users are kids
+    *** Time taken: 3659ms *** 11.9939% of users are kids
+    *** Time taken: 3574ms *** 11.9159% of users are kids
+    *** Time taken: 3578ms *** 12.030100000000001% of users are kids
 
 Notes
 * The parallel execution is faster than sequential (2.9x times)
@@ -42,17 +42,18 @@ Notes
 
 Output:
 
-    Running SequentialTest
-    *** Time taken: 42ms *** 12.0167% of users are kids
-    *** Time taken: 28ms *** 11.9293% of users are kids
-    *** Time taken: 22ms *** 11.95% of users are kids
-    *** Time taken: 23ms *** 11.9614% of users are kids
-
     Running ParallelCPUTest
-    *** Time taken: 112ms *** 12.000399999999999% of users are kids
-    *** Time taken: 102ms *** 11.997399999999999% of users are kids
-    *** Time taken: 94ms *** 12.0086% of users are kids
-    *** Time taken: 93ms *** 12.0403% of users are kids
+    *** Time taken: 78ms *** 11.9824% of users are kids
+    *** Time taken: 92ms *** 12.0415% of users are kids
+    *** Time taken: 89ms *** 11.991% of users are kids
+    *** Time taken: 89ms *** 12.0239% of users are kids
+
+    Running SequentialTest
+    *** Time taken: 24ms *** 12.023200000000001% of users are kids
+    *** Time taken: 20ms *** 11.9948% of users are kids
+    *** Time taken: 16ms *** 11.9628% of users are kids
+    *** Time taken: 16ms *** 11.9509% of users are kids
+
 
 * Machines:
     * Vostro: Quad-core - Intel® Core™ i5-2410M Processor Launched  Q1 2011 2 2.90 GHz  2.30 GHz  3 MB SmartCache Intel® HD Graphics 3000

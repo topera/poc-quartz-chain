@@ -14,9 +14,4 @@ public class ParallelCPUTest extends BaseTest {
         users.parallelStream().forEach(this::processUser);
     }
 
-    @Override
-    protected long countKids(List<User> users) {
-        return users.parallelStream().filter(User::isKid).count();
-    }
-
 }

@@ -12,7 +12,7 @@ abstract public class BaseTest {
     private static final long MEGA_USERS = 1;
     private static final int TESTS_EXECUTION = 4;
 
-    static final int KID_AGE_LIMIT = 12;
+    private static final int KID_AGE_LIMIT = 12;
     private static final float KID_AGE_MARGIN = 0.1f;
 
     // inner stuff
@@ -23,7 +23,6 @@ abstract public class BaseTest {
 
     protected abstract void printTestInfo();
     protected abstract void processUsers(List<User> users);
-    protected abstract long countKids(List<User> users);
 
     @Test
     public void test() {
@@ -37,12 +36,10 @@ abstract public class BaseTest {
         List<User> users = createUsers();
 
         long begin = System.currentTimeMillis();
-
         processUsers(users);
-        long kidsQuantity = countKids(users);
-
         long end = System.currentTimeMillis();
 
+        long kidsQuantity = users.stream().filter(User::isKid).count();
         double percentage = ((double) kidsQuantity / (double) USERS) * 100;
         assertions(users, kidsQuantity, percentage);
 
@@ -78,7 +75,7 @@ abstract public class BaseTest {
 
     private double calculateMagicNumber() {
         // any stupid slow operation...
-        int max=100;
+        int max=15;
         double magicNumber = 0;
 
         for(int i=0; i<max; i++){
