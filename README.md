@@ -36,7 +36,7 @@ Output:
     *** Time taken: 3578ms *** 12.030100000000001% of users are kids
 
 Notes
-* The parallel execution is faster than sequential (2.9x times)
+* The parallel execution is faster than sequential (~3.5x times)
     * However, there is a cost to split "tasks" to processors. So, we should try to centralize to have just one parallelStream call.
 * If we remove the slow operation ("calculateMagicNumbers") the sequential is always faster:
 
