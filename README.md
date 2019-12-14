@@ -16,8 +16,9 @@ Don't worry, you don't need to write any C code, just Java :)
 ## Lessons Learned
 While doing this project, I learned that...
 * **Discovery #1**: we need to install a Linux package (**ocl-icd-opencl-dev**) on local machine, otherwise will not work
-* **Discovery #2**: you CANNOT use GPU to run different unit tests on parallel. GPU can be used only to run THE SAME operation on many GPU cores. You can have different **data**, but not different processor **instructions**.
-* **Discovery #3**: in the current [Aparapi](http://aparapi.com) implementation you cannot use Java objects neigther call methods. We can only use primitive types: int, long, etc.
+* **Discovery #2**: in case of error accessing GPU the Aparapi library will automatically fallback to *parallelStream()* implementation (will use many cores of your CPU, not your GPU)
+* **Discovery #3**: you CANNOT use GPU to run different unit tests on parallel. GPU can be used only to run THE SAME operation on many GPU cores. You can have different **data**, but not different processor **instructions**.
+* **Discovery #4**: in the current Aparapi implementation you cannot use Java objects neigther call methods. We can only use primitive types: int, long, etc.
 
 ## Our program
 TODO
