@@ -1,6 +1,8 @@
 # Topera's Hello World #023 - IN PROGRESS 
 ## GPU tests with Java + Aparapi 
-This hello world shows how to use GPU (your amazing Graphics Card) in your Java projects!
+This hello world shows how to use GPU (your amazing Graphics Card!) in your Java projects.
+It uses [Aparapi](http://aparapi.com) library to send commands to GPU (which uses OpenCL internally).
+Don't worry, you don't need to write any C code, just Java :)
 
 ## How to use this source code
 * Use the `Clone or download` button above the get the url of this repository
@@ -13,14 +15,26 @@ This hello world shows how to use GPU (your amazing Graphics Card) in your Java 
 
 ## Lessons Learned
 While doing this project, I learned that...
-* **Discovery #1**: you CANNOT use GPU to run different unit tests on parallel. GPU can be used only to run THE SAME operation on many GPU cores. You can have different **data**, but not different processor **instructions**.
-* **Discovery #2**: in the current [Aparapi](http://aparapi.com) implementation you cannot use Java objects neigther call methods. We can only use primitive types: int, long, etc.
+* **Discovery #1**: we need to install a Linux package (**ocl-icd-opencl-dev**) on local machine, otherwise will not work
+* **Discovery #2**: you CANNOT use GPU to run different unit tests on parallel. GPU can be used only to run THE SAME operation on many GPU cores. You can have different **data**, but not different processor **instructions**.
+* **Discovery #3**: in the current [Aparapi](http://aparapi.com) implementation you cannot use Java objects neigther call methods. We can only use primitive types: int, long, etc.
 
 ## Our program
 TODO
 
 ## Current results
 TODO
+
+## Problems with GPU
+To use the GPU you need to have **OpenCL** installed in your machine.
+In my Ubuntu I just needed to run:
+
+    sudo apt update
+    sudo apt install ocl-icd-opencl-dev
+
+If you don't install it, probably you will see this error:
+
+    GRAVE: Check your environment. Failed to load codegen native library  or possibly failed to locate opencl native library (opencl.dll/opencl.so). Ensure that OpenCL is in your PATH (windows) or in LD_LIBRARY_PATH (linux).
 
 ## Conclusions
 TODO
