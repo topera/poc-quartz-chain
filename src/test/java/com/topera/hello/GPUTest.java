@@ -12,7 +12,7 @@ public class GPUTest {
 
     // customizations
     private static final int ITEMS_SIZE = 500; // on millions
-    private static final int TESTS_EXECUTION = 3;
+    private static final int TESTS_EXECUTION = 2;
 
     // inner stuff
     private static final int MEGA = 1000000;
