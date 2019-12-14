@@ -11,7 +11,7 @@ import java.util.Random;
 abstract public class BaseTest {
 
     // customizations
-    private static final long MEGA_USERS = 5;
+    private static final long MEGA_USERS = 2;
     private static final int TESTS_EXECUTION = 4;
 
     private static final int KID_AGE_LIMIT = 12;
