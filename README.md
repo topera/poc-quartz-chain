@@ -23,7 +23,7 @@ Then will do these steps on each user:
 
 Output:
 
-    Running SequentialTests
+    Running SequentialTest
     *** Time taken: 8160ms *** 12.01855% of users are kids
     *** Time taken: 8046ms *** 12.0059% of users are kids
     *** Time taken: 7078ms *** 12.01% of users are kids
