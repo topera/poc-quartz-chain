@@ -11,8 +11,8 @@ dependencies {
 }
 
 test{
-    minHeapSize = "1g"
-    maxHeapSize = "4g" // adjust according to you memory machine
+    minHeapSize = "8g"
+    maxHeapSize = "16g" // adjust according to you memory machine
 }
 
 defaultTasks 'test'

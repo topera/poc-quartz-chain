@@ -9,6 +9,7 @@ Don't worry, you don't need to write any C code, just Java :)
 * In IntelliJ IDEA: File → New → Project From Version Control → Git → put the url of this repository
 
 ## How to test
+* Required hardware: machine with 16GB RAM + GPU. However, you can change the number of instances on the test file  if you have less memory.
 * Install Java, open a terminal and run
     * $ ./gradlew
 * Note: adjust the memory settings changing "maxHeapSize" on build.gradle file 
