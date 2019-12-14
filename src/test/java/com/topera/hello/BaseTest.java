@@ -2,6 +2,8 @@ package com.topera.hello;
 
 import org.junit.Test;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -9,7 +11,7 @@ import java.util.Random;
 abstract public class BaseTest {
 
     // customizations
-    private static final long MEGA_USERS = 1;
+    private static final long MEGA_USERS = 5;
     private static final int TESTS_EXECUTION = 4;
 
     private static final int KID_AGE_LIMIT = 12;
@@ -35,9 +37,9 @@ abstract public class BaseTest {
     private void runTest() {
         List<User> users = createUsers();
 
-        long begin = System.currentTimeMillis();
+        Instant begin = Instant.now();
         processUsers(users);
-        long end = System.currentTimeMillis();
+        Instant end = Instant.now();
 
         long kidsQuantity = users.stream().filter(User::isKid).count();
         double percentage = ((double) kidsQuantity / (double) USERS) * 100;
@@ -61,21 +63,9 @@ abstract public class BaseTest {
         }
     }
 
-    private void printTimeReport(long begin, long end, double percentage) {
-        System.out.println("*** Time taken: " + (end - begin) + "ms *** " + percentage + "% of users are kids");
-    }
-
-    private void assertions(List<User> users, long kidsQuantity, double percentage) {
-        assert users.size() == USERS;
-        assert kidsQuantity >= 0;
-        assert kidsQuantity <= USERS;
-        assert percentage > KID_AGE_LIMIT - KID_AGE_MARGIN;
-        assert percentage < KID_AGE_LIMIT + KID_AGE_MARGIN;
-    }
-
     private double calculateMagicNumber() {
         // any stupid slow operation...
-        int max=15;
+        int max = 15;
         double magicNumber = 0;
 
         for(int i=0; i<max; i++){
@@ -87,6 +77,19 @@ abstract public class BaseTest {
         }
 
         return magicNumber;
+    }
+
+    private void printTimeReport(Instant begin, Instant end, double percentage) {
+        long duration = Duration.between(begin, end).toMillis();
+        System.out.println("*** Time taken: " + (duration) + "ms *** " + percentage + "% of users are kids");
+    }
+
+    private void assertions(List<User> users, long kidsQuantity, double percentage) {
+        assert users.size() == USERS;
+        assert kidsQuantity >= 0;
+        assert kidsQuantity <= USERS;
+        assert percentage > KID_AGE_LIMIT - KID_AGE_MARGIN;
+        assert percentage < KID_AGE_LIMIT + KID_AGE_MARGIN;
     }
 
 }

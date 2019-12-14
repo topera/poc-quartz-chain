@@ -2,7 +2,7 @@ package com.topera.hello;
 
 import java.util.List;
 
-public class ParallelCPUTest extends BaseTest {
+public class ParallelTest extends BaseTest {
 
     @Override
     protected void printTestInfo() {

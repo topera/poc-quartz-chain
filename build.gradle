@@ -6,7 +6,6 @@ repositories {
 }
 
 dependencies {
-    testCompile 'com.aparapi:aparapi:1.10.0'
     testCompile 'junit:junit:4.12'
 }
 
