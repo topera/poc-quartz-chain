@@ -19,14 +19,45 @@ Then will do these steps on each user:
     * If your processor is correct, you should have ~12% of kids, since the highest age is 100 years. If you see a number "far" from 12, you have a problem in your JVM or processor :)
 
 ## Current results
-* Machine: Vostro: Quad-core - Intel® Core™ i5-2410M Processor Launched Q1 2011 (2 physical cores vs 2 = 4 cores)
+* Machine: DELL Vostro 3550 - Intel® Core™ i5-2410M (2 * 2 physical cores = **4 cores**)
 
 Output:
-TODO
+
+    Running SequentialTests
+    *** Time taken: 8160ms *** 12.01855% of users are kids
+    *** Time taken: 8046ms *** 12.0059% of users are kids
+    *** Time taken: 7078ms *** 12.01% of users are kids
+    *** Time taken: 7059ms *** 12.0132% of users are kids
+
+    Running ParallelCPUTest
+    *** Time taken: 2428ms *** 11.96315% of users are kids
+    *** Time taken: 2409ms *** 12.02005% of users are kids
+    *** Time taken: 2307ms *** 11.97705% of users are kids
+    *** Time taken: 2368ms *** 11.9984% of users are kids
+
+Gradle Test Executor 2 finished executing tests.
+
+
+* Machine: DELL G5 15 5590 - Intel® Core™ i7-9750H (Max frequency: 4.5 GHz, 2 * 6 physical cores = **12 cores**)
+
+Output:
+
+    Running SequentialTest
+    *** Time taken: 6206ms *** 11.989700000000001% of users are kids
+    *** Time taken: 6192ms *** 11.9964% of users are kids
+    *** Time taken: 6178ms *** 11.9871% of users are kids
+    *** Time taken: 6186ms *** 11.99715% of users are kids
+
+    Running ParallelCPUTest
+    *** Time taken: 652ms *** 11.98715% of users are kids
+    *** Time taken: 719ms *** 11.99125% of users are kids
+    *** Time taken: 636ms *** 11.957049999999999% of users are kids
+    *** Time taken: 637ms *** 12.04115% of users are kids
+
+
 
 Notes
-* The parallel execution is faster than sequential (~3.5x times)
-        * However, there is a cost to split "tasks" to processors. So, we should try to centralize to have just one parallelStream call.
+* As expected, the parallel execution is faster than sequential. However, there is a cost to split "tasks" to processors. So, we should try to centralize to have just one parallelStream call.
 * If we remove the slow operation ("calculateMagicNumbers") the sequential is always faster than parallel
 
 
