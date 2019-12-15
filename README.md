@@ -1,4 +1,4 @@
-# Topera's Hello World #023 - IN PROGRESS 
+# Topera's Hello World #023 
 ## GPU tests with Java + Aparapi 
 This hello world shows how to use GPU (your amazing Graphics Card!) in your Java projects.
 It uses [Aparapi](http://aparapi.com) library to send commands to GPU (which uses OpenCL internally).
@@ -21,12 +21,6 @@ While doing this project, I learned that...
 * **Discovery #3**: you CANNOT use GPU to run different unit tests on parallel. GPU can be used only to run THE SAME operation on many GPU cores. You can have different **data**, but not different processor **instructions**.
 * **Discovery #4**: in the current Aparapi implementation you cannot use Java objects neigther call methods. We can only use primitive types: int, long, etc.
 
-## Our program
-TODO
-
-## Current results
-TODO
-
 ## Problems with GPU
 To use the GPU you need to have **OpenCL** installed in your machine.
 In my Ubuntu I just needed to run:
@@ -37,9 +31,6 @@ In my Ubuntu I just needed to run:
 If you don't install it, probably you will see this error:
 
     GRAVE: Check your environment. Failed to load codegen native library  or possibly failed to locate opencl native library (opencl.dll/opencl.so). Ensure that OpenCL is in your PATH (windows) or in LD_LIBRARY_PATH (linux).
-
-## Conclusions
-TODO
 
 ## Tech Stack
 * Intellij IDEA 2019.3
