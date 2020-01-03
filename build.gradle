@@ -6,14 +6,10 @@ repositories {
 }
 
 dependencies {
-    testCompile 'com.aparapi:aparapi:1.10.0'
     testCompile 'junit:junit:4.12'
 }
 
 test{
-    minHeapSize = "8g"
-    maxHeapSize = "16g" // adjust according to you memory machine
-
     testLogging {
         showStandardStreams = true
     }
