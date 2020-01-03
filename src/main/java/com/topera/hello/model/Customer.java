@@ -1,11 +1,13 @@
 package com.topera.hello.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonRootName("customer")
 public class Customer {
 
     private String name;

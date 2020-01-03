@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 public class JacksonTest {
 
     private static final String RAW_XML = "" +
-            "<Customer>" +
+            "<customer>" +
             "    <name>Enzo</name>" +
             "    <cars>" +
             "        <car>" +
@@ -23,7 +23,7 @@ public class JacksonTest {
             "            <name>fiat</name>" +
             "        </car>" +
             "    </cars>" +
-            "</Customer>";
+            "</customer>";
 
     private static final String XML = RAW_XML.replaceAll("\\s", "");
 
