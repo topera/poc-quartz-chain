@@ -6,14 +6,9 @@ repositories {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.10.1'
+    testImplementation 'junit:junit:4.12'
 }
 
-test{
-    testLogging {
-        showStandardStreams = true
-    }
-    dependsOn cleanTest
-}
-
+test.dependsOn cleanTest
 defaultTasks 'test'
