@@ -45,4 +45,9 @@ public class JacksonTest {
         assertEquals("fiat", customer.getCars().get(1).getName());
     }
 
+    @Test
+    public void testComplete() throws JsonProcessingException {
+        assertEquals(XML, XMLBuilder.build(XMLParser.parse(XML)));
+    }
+
 }
