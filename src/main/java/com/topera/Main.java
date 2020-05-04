@@ -3,6 +3,7 @@ package com.topera;
 import org.quartz.Job;
 import org.quartz.JobBuilder;
 import org.quartz.JobDetail;
+import org.quartz.JobExecutionContext;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.TriggerBuilder;
@@ -23,6 +24,20 @@ public class Main {
         scheduler.addJob(jobB, true);
         scheduler.getListenerManager().addJobListener(jobListener);
         scheduler.start();
+    }
+
+    public static class JobA implements Job {
+        @Override
+        public void execute(JobExecutionContext context) {
+            System.out.println("Job A running...");
+        }
+    }
+
+    public static class JobB implements Job {
+        @Override
+        public void execute(JobExecutionContext context) {
+            System.out.println("Job B running...");
+        }
     }
 
 }
